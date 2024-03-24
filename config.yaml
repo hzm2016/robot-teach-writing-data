@@ -1,0 +1,32 @@
+NAME: Test
+
+PRE_PROCESS: default
+INPUT_CHANNEL: 1
+OUTPUT_CHANNEL: 1
+
+GAN_MODEL_TYPE: gan.nn.StyledGenerator2
+DIS_MODEL_TYPE: gan.nn.StyledGenerator2
+GAN_PARAM: 
+  INPUT_NC: 1
+  OUTPUT_NC: 1 
+  
+GAN_MODEL_PATH: /home/zhimin/code/8_nus/robotic-teaching/gan/G_A2B_119.pth
+DIS_MODEL_PATH: /home/zhimin/code/8_nus/robotic-teaching/gan/G_A2B_119.pth
+FONT_SIZE: 128
+MAX_PADDING: 0
+
+NUM_REFERENCE_POINTS: 4
+TTF_FILE: ./tools/ttf/font3.ttf
+GRAPHICS_TXT: ./tools/src/graphics.txt
+
+CUDA: True
+SAVE_TRAJ: True
+GENERATIION_ONLY: True
+STYLELIZATION: False
+
+FEEDBACK:
+  WITH_FEEDBACK: True
+  POST_PRORCESS:
+    { BINARIZE: 128}
+
+SHOW_VIDEO: False
